@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PoppinsBold;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: PoppinsMedium;
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: cornsilk;
+  font-family: PoppinsBold;
+}
+
+#turn {
+  color: cornsilk;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: PoppinsMedium;
+}
+
+.content {
+  height: 340px;
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* background-color: bisque; */
+}
+
+.row {
+  background-color: maroon;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.row:hover {
+  border-radius: 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: black 0px 0px 20px 0px;
+  scale: 1.15;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.x {
+  background-color: orange;
+  background-image: url(../assets/x.svg);
+}
+
+.o {
+  /* background-color: violet;
+    background-image: url(/assets/o.svg); */
+  background: chocolate url(../assets/o.svg) no-repeat center;
+}
+#result {
+  color: cornsilk;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  font-family: PoppinsMedium;
+}
+
+.flex-container {
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+
+.flex-container button {
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 20px 50px;
+  background-color: cornsilk;
+  color: maroon;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-family: PoppinsMedium;
+  cursor: pointer;
+}
+
+.flex-container button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  scale: 1.15;
+}
+
+.score {
+  color: cornsilk;
+  font-family: PoppinsMedium;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .row {
+    height: 80px;
+    width: 80px;
+  }
+
+  .flex-container a {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+  }
+
+  .wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .o {
+    background: chocolate url(../assets/mob.svg) no-repeat center;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-container button {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    background-color: cornsilk;
+    color: maroon;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: PoppinsMedium;
+    cursor: pointer;
+  }
+}
